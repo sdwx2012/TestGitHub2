@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F77E6448-32A7-45DF-9AE8-A8A8C243FFB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TEST</RootNamespace>
+    <AssemblyName>TEST</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.6.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.0.0.4098, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.0.0.4098, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear, Version=5.1.1.158, Culture=neutral, PublicKeyToken=39c186f5904944ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.3990.25764, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaiduMapProvider.cs" />
+    <Compile Include="WCFClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WCFClient.Designer.cs">
+      <DependentUpon>WCFClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WCFServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WCFServer.Designer.cs">
+      <DependentUpon>WCFServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="百度API.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="百度API.Designer.cs">
+      <DependentUpon>百度API.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoSQL.Designer.cs">
+      <DependentUpon>NoSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GMap测试.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GMap测试.Designer.cs">
+      <DependentUpon>GMap测试.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapControl.Designer.cs">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoSqlItem.cs" />
+    <Compile Include="视频播放.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="视频播放.designer.cs">
+      <DependentUpon>视频播放.cs</DependentUpon>
+    </Compile>
+    <Compile Include="百度地图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="百度地图.Designer.cs">
+      <DependentUpon>百度地图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VlcPlayer.cs" />
+    <Compile Include="二维码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="二维码.Designer.cs">
+      <DependentUpon>二维码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="打印二维码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="打印二维码.Designer.cs">
+      <DependentUpon>打印二维码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="WCFClient.resx">
+      <DependentUpon>WCFClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WCFServer.resx">
+      <DependentUpon>WCFServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="百度API.resx">
+      <DependentUpon>百度API.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoSQL.resx">
+      <DependentUpon>NoSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GMap测试.resx">
+      <DependentUpon>GMap测试.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="百度地图.resx">
+      <DependentUpon>百度地图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="视频播放.resx">
+      <DependentUpon>视频播放.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="二维码.resx">
+      <DependentUpon>二维码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="打印二维码.resx">
+      <DependentUpon>打印二维码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Map.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
